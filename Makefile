@@ -6,14 +6,14 @@
 #    By: cschabra <cschabra@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 18:15:02 by cschabra      #+#    #+#                  #
-#    Updated: 2023/03/13 13:19:00 by cschabra      ########   odam.nl          #
+#    Updated: 2023/03/13 15:41:12 by cschabra      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= push_swap
 CFLAGS= -Wall -Wextra -Werror $(HEADERS) #-fsanitize=address
 
-LIBFT= libft
+LIBFT= 42lib
 
 HEADERS= -I include -I $(LIBFT)/include
 LIBS= $(LIBFT)/libft.a
