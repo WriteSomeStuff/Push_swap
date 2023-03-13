@@ -1,5 +1,5 @@
 # Push_swap - @Codam
-Implementation of a sorting algorithm to sort a doubly linked list with positive and negative input.
+Implementation of a sorting algorithm to sort a doubly linked list with positive and negative numbers as input.
 
 ## How does it work?
 
