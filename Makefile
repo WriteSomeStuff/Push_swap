@@ -6,7 +6,7 @@
 #    By: cschabra <cschabra@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 18:15:02 by cschabra      #+#    #+#                  #
-#    Updated: 2023/03/13 12:56:40 by cschabra      ########   odam.nl          #
+#    Updated: 2023/03/13 13:19:00 by cschabra      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,17 +18,19 @@ LIBFT= libft
 HEADERS= -I include -I $(LIBFT)/include
 LIBS= $(LIBFT)/libft.a
 
-CFILES= create_a.c \
-inputcheck.c \
-lstfunc.c \
-lstfunc2.c \
-main.c \
-rules.c \
-sorting.c
+CFILES= ./src/create_a.c \
+./src/inputcheck.c \
+./src/lstfunc.c \
+./src/lstfunc2.c \
+./src/main.c \
+./src/rules.c \
+./src/sorting.c
+
+OBJECTS= $(CFILES:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(CFILES)
+$(NAME): $(OBJECTS)
 	@$(MAKE) -C $(LIBFT)
 	@$(CC) -o $(NAME) $(CFLAGS) $(CFILES) $(LIBS)
 
