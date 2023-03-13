@@ -6,7 +6,7 @@
 /*   By: cschabra <cschabra@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/21 15:56:27 by cschabra      #+#    #+#                 */
-/*   Updated: 2023/01/23 20:16:19 by cschabra      ########   odam.nl         */
+/*   Updated: 2023/03/13 12:57:40 by cschabra      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 # include <stdio.h>
 # include <limits.h>
 # include <stdbool.h>
-# include "42lib/libft/libft.h"
-# include "42lib/printf/ft_printf.h"
+# include "libft.h"
 
 typedef struct d_list
 {

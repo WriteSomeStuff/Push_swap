@@ -6,43 +6,28 @@
 #    By: cschabra <cschabra@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 18:15:02 by cschabra      #+#    #+#                  #
-#    Updated: 2023/03/13 12:56:40 by cschabra      ########   odam.nl          #
+#    Updated: 2023/03/13 13:05:58 by cschabra      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= push_swap
-CFLAGS= -Wall -Wextra -Werror $(HEADERS) #-fsanitize=address
+NAME= libft.a
+CFLAGS= -Wall -Wextra -Werror -I include
 
-LIBFT= libft
+CFILES= $(shell find . -iname '*.c')
 
-HEADERS= -I include -I $(LIBFT)/include
-LIBS= $(LIBFT)/libft.a
-
-CFILES= create_a.c \
-inputcheck.c \
-lstfunc.c \
-lstfunc2.c \
-main.c \
-rules.c \
-sorting.c
+OBJECTS= $(CFILES:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(CFILES)
-	@$(MAKE) -C $(LIBFT)
-	@$(CC) -o $(NAME) $(CFLAGS) $(CFILES) $(LIBS)
+$(NAME): $(OBJECTS)
+	@ar -rcs $(NAME) $(OBJECTS)
 
 clean:
-	rm  -f $(OBJECTS)
-	@$(MAKE) -C $(LIBFT) clean
+	@rm  -f $(OBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
-	@$(MAKE) -C $(LIBFT) fclean
+	@rm -f $(NAME)
 
 re: fclean all
 
-debug: CFLAGS = -g
-debug: re
-
-.PHONY: all clean fclean re debug
+.PHONY: all clean fclean re
