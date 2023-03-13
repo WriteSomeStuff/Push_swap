@@ -1,5 +1,5 @@
 # Push_swap - @Codam
-A sorting algorithm to sort a doubly linked list with positive and negative numbers as input. The subject specifies certain rules that must be followed;
+A sorting algorithm to sort a doubly linked list with positive and negative numbers as input. The subject specifies certain rules that must be followed. We can only;
 - sa (swap a): Swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.
 - sb (swap b): Swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements.
 - ss: sa and sb at the same time.
