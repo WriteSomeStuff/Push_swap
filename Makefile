@@ -44,7 +44,7 @@ fclean: clean
 
 re: fclean all
 
-debug: CFLAGS = -g
+debug: CFLAGS += -g
 debug: re
 
 .PHONY: all clean fclean re debug
